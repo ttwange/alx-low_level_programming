@@ -3,10 +3,11 @@
 /**
  * main - a program that prints _putchar
  *
- * return: 0
+ * Return: 0
  */
 
-int main(void){
+int main(void)
+{
  	char txt[8] ="_putchar";
 	int i;
 
