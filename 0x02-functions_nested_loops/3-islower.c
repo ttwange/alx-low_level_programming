@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *_islower -checks whether is lower or not
- *@c: Asciicode character
+ * _islower - checks whether is lower or not
+ *@c: Ascii code character
  *
- * Return : 0 if not and 1 if lower
+ * Return: 0 if it is not, 1 if it is lower.
  */
 int _islower(int c)
 {
