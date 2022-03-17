@@ -1,8 +1,7 @@
-
 #include <stdio.h>
 
 /**
- * main _isupper9(int c) checks  code for upper case
+ * _isupper - checks  code for upper case or lower case
  *@c: character input
  * Return 1 if uppercase and 0 if lower case
  */
