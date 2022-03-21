@@ -10,9 +10,8 @@ int _string(char *s)
 	char *s;
 	int len;
 
-	str = "cuea";
-	len _strlen(str);
-	*str = len;
-	putchar("%d\n",*s);
+	*s = "cuea";
+	len = _strlen(str);
+	_putchar("%d\n",*s);
 	return(0);
 }
