@@ -4,15 +4,18 @@
  * @str: pointer to the string to print
  * Return: void
 */
-
-
 void _puts(char *str)
 {
-int i = 0;
-while (str[i])
-{
-	_putchar(str[i]);
-	i++;
-}
-_putchar('\n');
+	int counter = 0;
+
+	while (counter >= 0)
+	{
+		if (str[counter] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		_putchar(str[counter]);
+		counter++;
+	}
 }
