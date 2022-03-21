@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
- * _puts - prints a string, followed by a new line,
- * @str: pointer to the string to print
- * Return: void
-*/
+ * _puts - prints string
+ * @str: input string
+ * Return: nothing
+ */
+
 void _puts(char *str)
 {
 	int counter = 0;
