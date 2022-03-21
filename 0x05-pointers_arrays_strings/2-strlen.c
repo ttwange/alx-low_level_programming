@@ -6,11 +6,9 @@
  */
 int _strlen(char *s)
 {
-	char *s;
-	int len;
+	int c = 0;
 
-	*s = "cuea";
-	len = _strlen(str);
-	_putchar("%d\n",*s);
-	return(0);
+	while (*(s + c) != '\0')
+		c++;
+	return (c);
 }
