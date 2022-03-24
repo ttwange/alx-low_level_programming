@@ -2,7 +2,7 @@
 
 **
  *string_toupper - makes uppercase
- *@i: string input
+ *@i:string input
  *Return: pointer to destination
  */
 
