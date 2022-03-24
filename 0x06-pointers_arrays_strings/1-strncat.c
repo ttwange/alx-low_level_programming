@@ -1,6 +1,7 @@
 #include "main.h"
 
-/**_strncat -concatenates 
+/**
+ *_strncat -concatenates 
  *strings@dest: destination
  *@src: source
  *@n: integer
