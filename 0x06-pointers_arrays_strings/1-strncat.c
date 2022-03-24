@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-#incclude "main.h"
-
-=======
 #include "main.h"
 
-/**
- *_strncat - concatenates strings
- *@dest: destination
+/**_strncat -concatenates 
+ *strings@dest: destination
  *@src: source
  *@n: integer
  *Return: dest
@@ -31,4 +26,3 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	return (dest);
 }
->>>>>>> 1c0890cf032f68042a10d657dfee1a20ff68ba33
