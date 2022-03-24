@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * string_toupper - make uppercase
- * @i: string input
- * Return: pointer to destination
+ *string_toupper - make uppercase
+ *@i: string input
+ *Return: pointer to destination
  */
  
 char *string_toupper(char *i)
