@@ -1,3 +1,4 @@
+
 /**
  * _putchar - writes the character c toto stdout
  * @c: The character to print
