@@ -1,1 +1,1 @@
-a readme for the pointers,arrays and strings
+another read me for assignment 6
