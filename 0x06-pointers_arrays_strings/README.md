@@ -1,1 +1,1 @@
-readme 0x06-pointers_arrays_strings
+another read me for assignment 6
