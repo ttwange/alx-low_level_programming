@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 /**
- *_memset - fill the memory with a constant
- *@s:pointer to memory
- *@b:thing to write 
- *@n:bytes
- *Return: 
+ * _memset - writes to memory
+ * @s: pointer to memory
+ * @b: thing to write
+ * @n: bytes
+ * Return: s
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int i;
+	unsigned int i;
 
- for (i = 0; i < nn; i++)
- {
-	*(s +i) = b;
- }
-return (s); 
+	for (i = 0; i < n; i++)
+	{
+		*(s + i) = b;
+	}
+	return (s);
 }
