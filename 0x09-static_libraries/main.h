@@ -1,5 +1,5 @@
-#ifdef _MYCODE_H_
-#define _MYCODE_H_
+#ifdef _MAIN_H_
+#define _MAIN_H_
 
 int _putchar(char c);
 
