@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-thojn
-=======
 #include "main.h"
 
 /**
@@ -21,4 +18,3 @@ int _isalpha(int c)
 	}
 	_putchar('\n');
 }
->>>>>>> fd047f6e3ab9d8138781b23feb2f52cd50564ceb
