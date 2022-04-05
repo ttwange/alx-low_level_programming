@@ -19,31 +19,10 @@
 
 
 char *create_array(unsigned int size, char c)
-
 {
+	char *p;
+	int i;
+	
+if( size == 0);
+	return(0);
 
-        char *p;
-
-        int i;
-
-
-
-        if (size == 0)
-
-                return NULL;
-
-        p = (char *)malloc(size * sizeof(char));
-
-        if (p == 0)
-
-                return NULL;
-
-        for (i = 0; i < size; i++)
-
-                p[i]
-
-p[i] = c;
-
-        return p;
-
-}
