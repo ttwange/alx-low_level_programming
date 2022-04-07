@@ -8,11 +8,11 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *mem;
+	int *j;
 
-	mem = malloc(b);
-	if (mem == NULL)
+	j= malloc(b);
+	if (j == NULL)
 		exit(98);
 
-	return (mem);
+	return (j);
 }
