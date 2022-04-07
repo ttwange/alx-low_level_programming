@@ -1,20 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- *_checked - checks for allcoated memory
- *@b: integer pointer
- *Return: Nothing
+ * malloc_checked - allocates memory
+ * @b: size in bytes
+ * Return: pointer to the memory created.
  */
 
 void *malloc_checked(unsigned int b)
 {
-	int *p;
+	char *mem;
 
-	p = malloc(b);
-
-	if( p == NULL)
+	mem = malloc(b);
+	if (mem == NULL)
 		exit(98);
 
-	return(p);
+	return (mem);
 }
