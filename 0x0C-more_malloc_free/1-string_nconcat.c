@@ -7,6 +7,7 @@
 *@s2: string 2
 *@n: integer
 *Return: pointer
+*/
 
 char * string_nconcat(char * s1, char * s2, unsigned int n) {
     char * ptr;
