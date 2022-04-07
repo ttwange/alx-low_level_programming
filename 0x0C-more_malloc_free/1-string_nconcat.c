@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+*_nconcat - combines two strings into one by a pointer
+*@s1: string 1
+*@s2: string 2
+*@n: integer
+*Return: pointer
+
 char * string_nconcat(char * s1, char * s2, unsigned int n) {
     char * ptr;
     unsigned int i, len1, len2;
