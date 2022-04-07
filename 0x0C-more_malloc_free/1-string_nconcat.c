@@ -2,41 +2,48 @@
 #include <stdlib.h>
 
 /**
-*_nconcat - combines two strings into one by a pointer
-*@s1: string 1
-*@s2: string 2
-*@n: integer
-*Return: pointer
-*/
+ * string_nconcat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
+ * @n: number of bytes.
+ *
+ * Return: pointer to the allocated memory.
+ * if malloc fails, status value is equal to 98.
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
-char * string_nconcat(char * s1, char * s2, unsigned int n) {
-    char * ptr;
-    unsigned int i, len1, len2;
+	if (s1 == NULL)
+		s1 = "";
 
-    if (!s1)
-      s1 = "";
-    if (!s2)
-      s2 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-    for (len1 = 0;*(s1 + len1); len1++)
-    ;
-    for (len2 = 0;*(s2 + len2); len2++)
-    ;
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
+		;
 
-    if (len2 < n)
-      n = len2;
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
+		;
 
-    ptr = malloc((len1 + n + 1) * sizeof(char));
+	if (n > ls2)
+		n = ls2;
 
-    if (!ptr)
-      return (NULL);
+	lsout = ls1 + n;
 
-    for (i = 0; i < (len1 + n); i++) {
-      if (i < len1)
-        ptr[i] = s1[i];
-      else
-        ptr[i] = s2[i - len1];
-    }
-    ptr[i] = '\0';
-  return (ptr);
+	sout = malloc(lsout + 1);
+
+	if (sout == NULL)
+		return (NULL);
+
+	for (i = 0; i < lsout; i++)
+		if (i < ls1)
+			sout[i] = s1[i];
+		else
+			sout[i] = s2[i - ls1];
+
+	sout[i] = '\0';
+
+	return (sout);
 }
