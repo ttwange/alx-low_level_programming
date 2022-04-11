@@ -1,3 +1,12 @@
-#include <stdio.h>
 #define SIZE 1024
-printf(size)
+/**
+ * main - checks for macro
+ *
+ * Return: 0
+ */
+
+int main()
+{
+  printf(size);
+  return 0;
+}
