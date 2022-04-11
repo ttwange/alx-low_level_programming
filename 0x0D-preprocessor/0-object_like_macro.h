@@ -3,7 +3,7 @@
 
 int main()
 {
-	printf("%d\n",SIZE);
+	printf(SIZE);
 	return 0;
 }
 
