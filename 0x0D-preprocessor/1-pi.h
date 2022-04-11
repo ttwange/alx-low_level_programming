@@ -1,8 +1,4 @@
-#include <stdio.h>
+#ifndef
 #define PI 3.14159265359
 
-int main()
-{
-	printf(PI);
-	return 0;
-}
+#endif
