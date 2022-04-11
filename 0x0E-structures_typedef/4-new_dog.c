@@ -29,6 +29,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		;
 	}
+	store->name = malloc(j + 1);
+	store->owner = malloc(k + 1);
+	if (store->name == NULL || store->owner == NULL)
+	{
+		free(store->name);
+		free(store->owner);
+		free(store);
+		return (NULL);
+	}
 	store->name = name;
 	store->age = age;
 	store->owner = owner;
