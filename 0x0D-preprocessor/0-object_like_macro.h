@@ -5,7 +5,4 @@
 int main()
 {
 	printf(SIZE);
-	return 0;
 }
-
-
