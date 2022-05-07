@@ -1,50 +1,47 @@
-#include "main.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
 /**
- * read_textfile - function that reads a text file and prints it to the
- * POSIX (Portable Operating System Interface (IX)) standard output.
- * @filename: name of file in string
- * @letters: number of letters to read from file
- * Return: the actual number of letters it could read and print.
- * If the file can not open or read, returns 0
- * If the filename is NULL, returns 0
- * If write fails or does not write the expected amount of bytes, return 0
+ * read_textfile - A function that reads a text file
+ * and prints to the POSIX STDOUT
+ * @filename: The filename to open
+ * @letters: The number of letters to read and print
+ * Return: The number of letters read and printed, or 0 on failure
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *content;
-	int fd, rd;
-	long int wrt;
+	int fdo, fdr, fdw;
+	char *temp;
 
-	content = malloc((letters + 1) * sizeof(char *));
-	if (filename == NULL || content == NULL)
+	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-	{
-		close(fd);
-		free(content);
+	temp = malloc(sizeof(char) * letters);
+	if (temp == NULL)
 		return (0);
-	}
-	rd = read(fd, content, letters);
-	if (rd == -1)
-	{
-		close(fd);
-		free(content);
-		return (0);
-	}
-	content[letters] = '\0';
 
-	wrt = write(STDOUT_FILENO, content, rd);
-
-	if (wrt < rd)
+	fdo = open(filename, O_RDONLY);
+	if (fdo < 0)
 	{
-		close(fd);
-		free(content);
+		free(temp);
 		return (0);
 	}
 
-	close(fd);
-	free(content);
-	return (wrt);
+	fdr = read(fdo, temp, letters);
+	if (fdr < 0)
+	{
+		free(temp);
+		return (0);
+	}
+
+	fdw = write(STDOUT_FILENO, temp, fdr);
+	free(temp);
+	close(fdo);
+
+	if (fdw < 0)
+		return (0);
+	return ((ssize_t)fdw);
 }
