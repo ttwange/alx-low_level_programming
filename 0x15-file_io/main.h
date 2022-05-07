@@ -7,7 +7,6 @@
 #include <stddef.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <stdio.h>
 
 size_t read_textfile(const char *filename, size_t letters);
 int _putchar(char c);
